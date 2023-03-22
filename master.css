@@ -1,0 +1,275 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Manrope', sans-serif;
+}
+
+:root {
+  --p-color: #858fad;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  position: relative;
+  background-color: #f9faff;
+}
+
+.liner-1 {
+  background-color: #f1f5fe;
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-bottom-left-radius: 100px;
+}
+
+.title {
+  position: relative;
+  text-align: center;
+  padding: 80px 0;
+}
+
+.title::before {
+  content: "";
+  width: 120px;
+  height: 120px;
+  border: 1px solid #ddd;
+  position: absolute;
+  border-radius: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  top: 40px;
+  left: 50%;
+}
+
+.title p {
+  color: #293356;
+  font-size: 20px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.title span {
+  color: #858fad;
+  font-size: 11px;
+}
+
+
+/* start card  */
+.card {
+  position: absolute;
+  width: 500px;
+  margin: 25px 0;
+  background-color: #fff;
+  padding: 35px 35px 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px #ddd;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media (max-width:767px) {
+  .card{
+    width: calc(100% - 30px);
+  }
+}
+.card .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card .header .view {
+  color: var(--p-color);
+}
+
+
+.card .header .price>span {
+  font-size: 30px;
+  color: #293356;
+  font-weight: bold;
+}
+
+@media (max-width:767px) {
+  .card .header{
+    font-size: 12px;
+  }
+}
+.slider {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+}
+
+.slider .track {
+  position: absolute;
+  border-radius: 5px;
+  left: 0;
+  top: 100%;
+  height: 100%;
+  width: 100px;
+  background-color: #a2f2eb;
+}
+
+#slider {
+  -webkit-appearance: none;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  background-color: #ddd;
+  outline: none;
+  margin: 10px 0;
+}
+
+#slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 35px;
+  height: 35px;
+  background-color: #15d4c5;
+  border-radius: 50%;
+  box-shadow: 0px 4px 15px #15d4c5;
+  cursor: e-resize;
+  background-image: url("images/icon-slider.svg");
+  background-size: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 99;
+  position: relative;
+}
+#slider::-webkit-slider-thumb:hover{
+  background-color: #0c8379;
+}
+
+.card .plan {
+  margin: 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card .plan .month,
+.card .plan .year {
+  color: #999;
+  padding: 0 10px;
+}
+@media (max-width:767px) {
+  .card .plan .month,
+.card .plan .year{
+  padding: 0 5px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+}
+.card .plan input {
+  width: 42px;
+  appearance: none;
+  height: 22px;
+  background-color: #d1d8eb;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+}
+
+.card .plan input::before {
+  content: "";
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  left: 3px;
+  top: 50%;
+  transition: .3s all linear;
+  transform: translateY(-50%);
+}
+
+.card .plan input:checked{
+  background-color: #77ecdc;
+}
+.card .plan input:checked::before {
+  left: calc(100% - 18px);
+}
+
+.card .plan .discount {
+  background-color: #ffedeb;
+  color: #de947b;
+  font-size: 11px;
+  padding: 2px;
+  border-radius: 20px;
+  width: 90px;
+  height: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+@media (max-width:767px) {
+.card .plan .discount{
+  overflow: hidden;
+  width: 25px;
+  font-size: 9px;
+  height: 15px;
+  }
+}
+.card hr {
+  position: relative;
+  left: -20px;
+  width: calc(100% + 40px);
+  border-color: #f1f1f329;
+}
+
+.start {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width:767px) {
+  .start {
+    flex-direction: column;
+}
+}
+
+.start .text>div {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+}
+@media (max-width:767px) {
+  .start .text  {
+    margin-bottom: 30px;
+  }
+}
+.start .text img {
+  margin-right: 10px;
+}
+
+.start .text span {
+  font-size: 11px;
+  color: #999;
+}
+
+.start button {
+  width: 160px;
+  height: 40px;
+  border-radius: 30px;
+  border: none;
+  font-size: 13px;
+  background-color: #293356;
+  color: #9fabd5;
+  cursor: pointer;
+}
+
+/* end card  */

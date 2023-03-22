@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="master.css" />
+    <title>Interactive pricing component</title>
+  </head>
+  <body>
+    <div class="liner-1"></div>
+    <div class="title">
+      <p>Simple, traffic-based pricing</p>
+      <span>Sign-up for our 30-day trial. No credit card required</span>
+    </div>
+    <div class="card">
+      <div class="header">
+        <span class="view"> <span></span> Pageviews</span>
+        <span class="price"><span></span> <sup>/month</sup> </span>
+      </div>
+      <div class="slider">
+        <span class="track"></span>
+        <input type="range" id="slider" min="0" max="32" value="16">
+      </div>
+      <div class="plan">
+        <span class="month">Monthly Billing</span>
+        <input type="checkbox" name="" id="">
+        <span class="year">Yearly Billing</span>
+        <span class="discount">25% discount</span>
+      </div>
+      <hr>
+      <div class="start">
+        <div class="text">
+          <div>
+            <img src="images/icon-check.svg" alt="">
+            <span>Unlimited websites </span>
+          </div>
+          <div>
+            <img src="images/icon-check.svg" alt="">
+            <span>100% data ownership</span>
+          </div>
+          <div>
+            <img src="images/icon-check.svg" alt="">
+            <span>Email reports</span>
+          </div>
+        </div>
+        <button>Start my trial</button>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
+
